@@ -1,0 +1,10 @@
+{
+  "name": "gacho",
+  "version": "0.0.0",
+  "description": "MySQL focused ORM for Typescript",
+  "main": "index.js",
+  "repository": "git@github.com:yuixich/gacho.git",
+  "author": "yuixich@gmail.com",
+  "license": "MIT",
+  "private": false
+}
