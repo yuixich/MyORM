@@ -6,5 +6,8 @@
   "repository": "git@github.com:yuixich/gacho.git",
   "author": "yuixich@gmail.com",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "peerDependencies": {
+    "mysql": "^2.15.0"
+  }
 }
