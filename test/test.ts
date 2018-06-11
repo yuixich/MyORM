@@ -1,7 +1,10 @@
 import { Entity } from '../index';
+import { Column } from '../lib/Entity';
 
-class TestClass extends Entity {
-    name: string;
+console.log('before TestClass');
+
+export class TestClass extends Entity {
+    name: string = 'name is ins';
     constructor() {
         super();
         console.log('constructor called');
@@ -10,6 +13,10 @@ class TestClass extends Entity {
     b(): void {
         console.log('b called');
     }
+
+
+    @Column('test')
+    key: string;
 }
 
 
@@ -19,3 +26,8 @@ console.log('after');
 console.log(TestClass['_entityInfo']);
 
 a.b();
+//console.log(a.getTableName());
+//console.log(a.getTableName());
+a.key = 'tet';
+console.log((a.constructor as typeof TestClass).columns);
+console.log((a.constructor as typeof TestClass).getTableName());
