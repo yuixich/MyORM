@@ -8,8 +8,17 @@ export abstract class Entity {
     constructor() {
     }
 
-    static getTableName(): string {
-        return _.snakeCase(this.name);
+    getTableName(): string {
+        return _.snakeCase(this.constructor.name);
+    }
+
+    getPrimaryKeyNames(): string[] {
+        // TODO:
+        return [];
+    }
+
+    getPrimaryKeys(): Record<string,any> {
+        return {};
     }
 
     setColumn(abc: string): void {
@@ -33,4 +42,9 @@ export function Column(a: string ): Function {
         //console.log(object instanceof TestClass);
         object.setColumn(propertyName);
     }
+}
+
+
+export class TableMetadata {
+
 }
